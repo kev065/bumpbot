@@ -75,7 +75,11 @@ def main():
 
         # Load or create FAISS index
         if os.path.exists(f"{store_name}_faiss"):
-            VectorStore = FAISS.load_local(f"{store_name}_faiss", OpenAIEmbeddings())
+            VectorStore = FAISS.load_local(
+                f"{store_name}_faiss",
+                OpenAIEmbeddings(), 
+                allow_dangerous_deserialization=True
+            )
         else:
             embeddings = OpenAIEmbeddings()
             VectorStore = FAISS.from_texts(chunks, embedding=embeddings)
