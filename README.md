@@ -18,10 +18,10 @@ BumpBot is an AI-powered chatbot designed to assist pregnant women by answering 
 
 ## Setup and Installation
 
-1. Clone the repository:
+1. Clone this repository:
 
     ```
-    git clone https://github.com/yourusername/bumpbot.git
+    git clone git@github.com:kev065/bumpbot.git
     cd bumpbot
     ```
 
